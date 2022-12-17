@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    outline: none;
+    user-select: none;
+}
+
+/*---------------------------------------
+PADRÕES
+---------------------------------------*/
+.design{
+    border-radius: .5em;
+    background-color: #282831;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.6);
+    border: none;
+    color: #ffffff;
+}
+
+/*---------------------------------------
+BODY
+---------------------------------------*/
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: .5em;
+    background-color: #181822;
+    overflow: hidden;
+}
+
+/*---------------------------------------
+TABELA
+---------------------------------------*/
+table{
+    width: 100%;
+    margin: 7em 0 3em;
+    border-collapse: collapse;
+}
+
+/*---------------------------------------
+LINHAS
+---------------------------------------*/
+#numMedio1,
+#numMedio2{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*---------------------------------------
+BORDAS
+---------------------------------------*/
+#numMedio1 th,
+#numMedio1 td{
+    border-top: 1px solid #ffffff;
+}
+
+#numMedio1 th,
+#numMedio2 td{
+    border-bottom: 1px solid #ffffff;
+}
+
+/*---------------------------------------
+TÍTULOS
+---------------------------------------*/
+table tr th{
+    width: 228px;
+    font-size: 1.5em;
+}
+
+table #numMais1 th{color: #00eaff;}
+table #numMedio1 th{color: #ffcc00;}
+table #numMenos1 th{color: #ff545c;}
+
+/*---------------------------------------
+NÚMEROS SORTEADOS - ÁREA
+---------------------------------------*/
+td{
+    text-align: center;
+    border-left: 1px solid #ffffff;
+    padding: .4em;
+}
+
+td:hover{background-color: #323258;}
+
+/*---------------------------------------
+NÚMEROS SORTEADOS -  VALORES
+---------------------------------------*/
+table tr td h1{
+    font-size: 1.7em;
+}
+
+table tr td p{
+    font-size: .9em;
+    opacity: 60%;
+}
+
+/*---------------------------------------
+SEÇÃO DO BOTÃO
+---------------------------------------*/
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*---------------------------------------
+BOTÃO
+---------------------------------------*/
+button{
+    padding: .8em 1.6em;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #3b3b4c;
+}
+
+button:focus{
+    background-color: #323258;
+}
+
+button.btnUsado{
+    display: none;
+}
