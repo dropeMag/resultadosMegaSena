@@ -11,7 +11,7 @@
 <h4 align="center"> :pause_button: Under Development :pause_button: </h4>
 
 :airplane: Link:
-- <a href="https://dropemag.github.io/resultadosMegaSena/" target="_blank">Landingpage_5</a>
+- <a href="https://dropemag.github.io/resultadosMegaSena/" target="_blank">Melhores Números da Mega Sena</a>
 </br>
 
 :hammer_and_wrench: Languages:
