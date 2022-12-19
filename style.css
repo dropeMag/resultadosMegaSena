@@ -24,10 +24,10 @@ BODY
 ---------------------------------------*/
 body{
     width: 100vw;
-    height: 100vh;
-    padding: .5em;
+    min-height: 100vh;
+    padding: 1em;
     background-color: #181822;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /*---------------------------------------
@@ -37,35 +37,14 @@ table{
     width: 100%;
     margin: 7em 0 3em;
     border-collapse: collapse;
-}
-
-/*---------------------------------------
-LINHAS
----------------------------------------*/
-#numMedio1,
-#numMedio2{
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-/*---------------------------------------
-BORDAS
----------------------------------------*/
-#numMedio1 th,
-#numMedio1 td{
-    border-top: 1px solid #ffffff;
-}
-
-#numMedio1 th,
-#numMedio2 td{
-    border-bottom: 1px solid #ffffff;
+    overflow: hidden;
 }
 
 /*---------------------------------------
 TÍTULOS
 ---------------------------------------*/
 table tr th{
-    width: 228px;
-    font-size: 1.5em;
+    border-bottom: 1px solid transparent;
 }
 
 table #numMais1 th{color: #00eaff;}
@@ -77,11 +56,10 @@ NÚMEROS SORTEADOS - ÁREA
 ---------------------------------------*/
 td{
     text-align: center;
-    border-left: 1px solid #ffffff;
+    border: 1px solid transparent;
+    border-right: none;
     padding: .4em;
 }
-
-td:hover{background-color: #323258;}
 
 /*---------------------------------------
 NÚMEROS SORTEADOS -  VALORES

@@ -1,0 +1,62 @@
+@media (max-width: 1024px){
+    body{
+        /* background-color: red; */
+    }
+
+    table{
+        margin: 1em 0 3em;
+    }
+
+    tr{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    th{
+        grid-column: 1/3;
+        padding: .5em 0;
+        font-size: 2.2em;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    #numMedio1 th,
+    #numMenos1 th,
+    td{
+        border-top: 1px solid #ffffff;
+    }
+
+    #numMais1 td:nth-child(odd),
+    #numMais2 td:nth-child(even),
+    #numMedio1 td:nth-child(odd),
+    #numMedio2 td:nth-child(even),
+    #numMenos1 td:nth-child(odd),
+    #numMenos2 td:nth-child(even){
+        border-left: 1px solid white;
+    }
+}
+
+@media (min-width: 1025px){
+    #numMedio1,
+    #numMedio2{
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    #numMais1 th,
+    #numMais2 td,
+    #numMedio1 th,
+    #numMedio2 td{
+        border-bottom-color: #ffffff;
+    }
+
+    table tr th{
+        width: 228px;
+        padding: 0;
+        font-size: 1.5em;
+    }
+
+    td{
+        border-left: 1px solid #ffffff;
+    }
+
+    td:hover{background-color: #323258;}
+}
