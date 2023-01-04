@@ -1,103 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    list-style: none;
-    outline: none;
-    user-select: none;
+    list-style-type: none;
+    font-family: 'Mulish', Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
-/*---------------------------------------
-PADRÕES
----------------------------------------*/
-.design{
-    border-radius: .5em;
-    background-color: #282831;
-    box-shadow: 0 0 2em rgba(0, 0, 0, 0.6);
-    border: none;
-    color: #ffffff;
-}
-
-/*---------------------------------------
-BODY
----------------------------------------*/
 body{
+    position: relative;
     width: 100vw;
-    min-height: 100vh;
-    padding: 1em;
-    background-color: #181822;
+    height: fit-content;
     overflow-x: hidden;
 }
 
-/*---------------------------------------
-TABELA
----------------------------------------*/
-table{
+:root{
+    --cor-claro1: #d6e0df;
+    --cor-claro2: #8aa6a3;
+    --cor-medio: #127369;
+    --cor-escuro: #03342f;
+}
+
+/* ----------------------------------------------------------------------------- */
+div.div-title{
+    margin-bottom: .5em;
+    padding: .5em 0;
+    text-align: center;
+}
+
+div.div-title h1{
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    color: var(--cor-escuro);
+    z-index: 1;
+}
+
+div.div-title h1::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2em;
+    height: .13em;
+    background-color: var(--cor-medio);
+    z-index: -1;
+}
+
+/* ----------------------------------------------------------------------------- */
+nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
     width: 100%;
-    margin: 7em 0 3em;
-    border-collapse: collapse;
+    height: fit-content;
+    background-color: var(--cor-claro1);
+    z-index: 2;
+}
+
+nav span{
+    padding: .3em 1em;
+    color: var(--cor-escuro);
+    cursor: pointer;
+    user-select: none;
+}
+
+nav span:active{
+    background-color: var(--cor-claro2);
+}
+
+/* ----------------------------------------------------------------------------- */
+header{
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+}
+
+header img{
+    width: 150px;
+}
+
+/* ----------------------------------------------------------------------------- */
+main{
+    width: 100%;
+    margin-top: 1em;
+    padding: 0 .5em;
+}
+
+main #jogos-selecionados ul{
+    background-color: var(--cor-claro1);
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto .5em;
+    width: 90%;
+    padding: .5em;
+    border-radius: 3em;
+}
+
+main #jogos-selecionados ul li{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--cor-escuro);
+}
+
+main #jogos-selecionados ul li:not(:last-child){
+    border-right: .1em solid var(--cor-medio);
+}
+
+/* ----------------------------------------------------------------------------- */
+main #historico{
+    margin-top: 2em;
+}
+
+main #historico div:nth-child(2){
+    background: linear-gradient(to bottom, #099b4a, #fab244, #d0264e);
+}
+
+main #historico div:nth-child(2) ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1em;
+    margin: 0 auto;
+    padding: 1em;
+    width: calc(100% - .3em*2);
+    background-color: #fff;
+}
+
+main #historico div:nth-child(2) ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-claro1);
+    width: 3em;
+    height: 3em;
+    border-radius: 100%;
+}
+
+main #historico div:nth-child(2) ul li p{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--cor-escuro);
+}
+
+main #historico div:nth-child(2) ul li span{
+    font-size: .7em;
+    color: var(--cor-escuro);
+}
+
+/* ----------------------------------------------------------------------------- */
+main #aviso{
+    margin-top: 3em;
+}
+
+main #aviso div:nth-child(2){
+    padding: 0 1.3em;
+}
+
+main #aviso div:nth-child(2) p{
+    margin-bottom: .5em;
+    text-indent: 1em;
+    color: var(--cor-escuro);
+    font-weight: 600;
+}
+
+/* ----------------------------------------------------------------------------- */
+footer{
+    margin-top: 3em;
+    padding: 1em 0 3em;
+    background-color: var(--cor-escuro);
+    text-align: center;
+    color: var(--cor-claro2);
     overflow: hidden;
 }
 
-/*---------------------------------------
-TÍTULOS
----------------------------------------*/
-table tr th{
-    border-bottom: 1px solid transparent;
+footer a{
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin: .3em auto;
+    font-size: 1.3em;
+    color: var(--cor-claro1);
 }
 
-table #numMais1 th{color: #00eaff;}
-table #numMedio1 th{color: #ffcc00;}
-table #numMenos1 th{color: #ff545c;}
-
-/*---------------------------------------
-NÚMEROS SORTEADOS - ÁREA
----------------------------------------*/
-td{
-    text-align: center;
-    border: 1px solid transparent;
-    border-right: none;
-    padding: .4em;
+footer a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: .1em;
+    background-color: var(--cor-claro2);
+    animation: linhaNome 1.5s linear infinite;
 }
 
-/*---------------------------------------
-NÚMEROS SORTEADOS -  VALORES
----------------------------------------*/
-table tr td h1{
-    font-size: 1.7em;
-}
+@keyframes linhaNome {
+    0%{
+        left: 0;
+        width: 0;
+    }
+    
+    20%{
+        left: 0;
+        width: 25%;
+    }
+    
+    40%{
+        left: 25%;
+        width: 50%;
+    }
+    
+    60%{
+        left: 50%;
+        width: 50%;
+    }
+    
+    80%{
+        left: 75%;
+        width: 25%;
+    }
 
-table tr td p{
-    font-size: .9em;
-    opacity: 60%;
-}
-
-/*---------------------------------------
-SEÇÃO DO BOTÃO
----------------------------------------*/
-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*---------------------------------------
-BOTÃO
----------------------------------------*/
-button{
-    padding: .8em 1.6em;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: #3b3b4c;
-}
-
-button:focus{
-    background-color: #323258;
-}
-
-button.btnUsado{
-    display: none;
+    100%{
+        left: 100%;
+        width: 0;
+    }
 }

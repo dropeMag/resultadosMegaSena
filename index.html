@@ -4,40 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fique Rico | Números da Mega Sena</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
-    <link rel="shortcut icon" href="imagens/img_money.png" type="image/x-icon">
-    <script type="module" src="script.js" defer></script>
-    <script type="module" src="dados.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,0" />
+    <script src="script.js" type="module" defer></script>
+    <script src="dados.js" type="module" defer></script>
 </head>
-<body>
-    <table class="design">
-        <!-- números que mais apareceram -->
-        <tr id="numMais1">
-            <th rowspan="2">MAIORES</th>
-        </tr>
-        <tr id="numMais2">
-        </tr>
+<body id="topo">
+    <nav>
+        <a href="#topo"><span class="material-symbols-rounded">star</span></a>
+        <a href="#historico"><span class="material-symbols-rounded">history</span></a>
+        <a href="#aviso"><span class="material-symbols-rounded">warning</span></a>
+    </nav>
 
-        <!-- números na média -->
-        <tr id="numMedio1">
-            <th rowspan="2">NEUTROS</th>
-        </tr>
-        <tr id="numMedio2">
-        </tr>
+    <header>
+        <img src="img/img_logo.jpg" alt="">
+    </header>
 
-        <!-- números que menos apareceram -->
-        <tr id="numMenos1">
-            <th rowspan="2">MENORES</th>
-        </tr>
-        <tr id="numMenos2">
-        </tr>
-    </table>
+    <main>
+        <section id="jogos-selecionados">
+            <div class="div-title">
+                <h1>Jogos Selecionados</h1>
+            </div>
 
-    <!-- botão que inicia o JavaScript -->
-    <section>
-        <button id="btn" class="design">VERIFICAR</button>
-    </section>
+            <div id="lista-jogos">
+            </div>
+        </section>
+
+        <section id="historico">
+            <div class="div-title">
+                <h1>Frequência de Aparições</h1>
+            </div>
+
+            <div>
+                <ul id="lista-numeros">
+                </ul>
+            </div>
+        </section>
+
+        <section id="aviso">
+            <div class="div-title">
+                <h1>Atenção</h1>
+            </div>
+
+            <div>
+                <p>Sorteios e Jogos de Azar são perigosos, podendo trazer perdas monetárias significativas para o jogador!</p>
+                <p>Essa web page apenas gera números aleatórios baseados na frequência de aparições dos números!</p>
+                <p>O criador desse sistema não prevê o futuro, portanto não pode ser responsabilizado por quaisquer prejuízos do usuário!</p>
+                <p>Entretanto, se o usuário ganhar uma graninha, pelo menos 10% deve ir para o desenvolvedor!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sistema desenvolvido por:</p>
+        <a href="https://www.linkedin.com/in/dropemag" target="_blank">Pedro Magalhães</a>
+    </footer>
 </body>
 </html>
